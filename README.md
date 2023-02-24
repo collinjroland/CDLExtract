@@ -25,3 +25,4 @@ DornQCDL = CDLClip(DornQ_ClipPath,DornQ_ClipName,DornQ_CDLFolder,
                    DornQ_WriteClip)
 DornQCDL.extract()     
 DornQData = DornQCDL.plotCDL()  
+![DornQ_05427927 Landcover](https://user-images.githubusercontent.com/45494890/221284991-c0d3fd89-72dc-4fda-91c8-6744f8d11e7d.png)
