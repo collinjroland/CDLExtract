@@ -9,7 +9,7 @@ CDLClipOut = Cropland Data Layer clipped files write folder
 MetricsFolder = Metrics CSV write folder
 LookupTablePath = Path to lookup CSV
 WriteClip = Boolean, write out clipped rasters or do not
-
+FigFolder = Figure write folder
 
 # Example
 DornQ_ClipPath = Path(r'C:\Users\cjr2\Documents\GISData\DornCreek\GageQWatershed.shp')
