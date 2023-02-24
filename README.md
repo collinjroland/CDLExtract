@@ -12,14 +12,14 @@ WriteClip = Boolean, write out clipped rasters or do not
 FigFolder = Figure write folder
 
 # Example
-DornQ_ClipPath = Path(r'C:\Users\cjr2\Documents\GISData\DornCreek\GageQWatershed.shp')
-DornQ_CDLFolder = Path(r'G:\NASS')
+DornQ_ClipPath = Path(r'..\DornCreek\GageQWatershed.shp')
+DornQ_CDLFolder = Path(r'..\NASS')
 DornQ_ClipName = "DornQ_05427927"
-DornQ_OutFolder = Path(r'C:\Users\cjr2\Documents\GISData\DornCreek\CDL')      
-DornQ_CDLClipFolder = Path(r'G:\NASS\ClipTemp')           
-DornQ_LookupTablePath = Path(r'C:\Users\cjr2\Documents\GISData\LandCover\WI_CDL_2018\WI_CDL_2018\CDLCodeLookupCombine.csv')           
+DornQ_OutFolder = Path(r'C..\DornCreek\CDL')      
+DornQ_CDLClipFolder = Path(r'..\NASS\ClipTemp')           
+DornQ_LookupTablePath = Path(r'..\LandCover\WI_CDL_2018\WI_CDL_2018\CDLCodeLookupCombine.csv')           
 DornQ_WriteClip = False      
-
+FigFolder = Path(r'..\Figures') 
 DornQCDL = CDLClip(DornQ_ClipPath,DornQ_ClipName,DornQ_CDLFolder,
                    DornQ_CDLClipFolder,DornQ_OutFolder,DornQ_LookupTablePath,
                    DornQ_WriteClip)
