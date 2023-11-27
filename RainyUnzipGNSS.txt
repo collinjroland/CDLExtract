@@ -1,0 +1,35 @@
+rnx2rtkp -k '*.conf file' -o File1.pos -i 'input obs file' 'input base
+
+#### UNZIP EMLID FILES
+
+# MKDIR
+mkdir UBX
+mkdir RINEX_3_03
+mkdir LLH
+
+# RINEX batch unzip
+$files = Get-ChildItem *RINEX*.zip
+foreach ($file in $files) {Expand-Archive -LiteralPath $file -DestinationPath '.\RINEX_3_03\'}
+
+# UBX batch unzip
+$files = Get-ChildItem *ubx*.zip
+foreach ($file in $files) {Expand-Archive -LiteralPath $file -DestinationPath '.\UBX\'}
+
+# LLH batch unzip
+$files = Get-ChildItem *LLH*.zip
+foreach ($file in $files) {Expand-Archive -LiteralPath $file -DestinationPath '.\LLH\'}
+
+#### UNZIP CORS FILES
+#mkdir RSVT
+mkdir BAUD
+
+# BAUD batch unzip
+$files = Get-ChildItem *Baud*.zip
+foreach ($file in $files) {Expand-Archive -LiteralPath $file -DestinationPath '.\BAUD\'}
+foreach ($file in $files) {Remove-Item -LiteralPath $file}
+
+# RSVT batch unzip
+#$files = Get-ChildItem *Rsvt*.zip
+#foreach ($file in $files) {Expand-Archive -LiteralPath $file -DestinationPath '.\RSVT\'}
+#foreach ($file in $files) {Remove-Item -LiteralPath $file}
+
